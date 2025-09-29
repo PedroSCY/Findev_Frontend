@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import CardModal from "@/components/ui/custom/CardModal";
+import Link from "next/link";
 
 export default function Home() {
+
   return (
     <div className="min-h-screen flex items-center justify-center">
       <CardModal
@@ -16,9 +18,11 @@ export default function Home() {
         </p>
         <br />
         <div className="flex justify-center w-full">
-          <Button className="w-full" size={"lg"} variant={"secondary"}>
-            Acessar
-          </Button>
+          <Link href={"/home"} className="w-full">
+            <Button className="w-full" size={"lg"} variant={"secondary"}>
+              Acessar
+            </Button>
+          </Link>
         </div>
       </CardModal>
     </div>

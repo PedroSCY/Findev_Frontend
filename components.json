@@ -4,7 +4,7 @@
   "rsc": true,
   "tsx": true,
   "tailwind": {
-    "config": "",
+    "config": "tailwind.config.js",
     "css": "app/globals.css",
     "baseColor": "zinc",
     "cssVariables": true,
@@ -16,7 +16,9 @@
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks"
+    "data": "@/data",
+    "hooks": "@/data/hooks",
+    "contexts": "@/data/contexts"
   },
   "registries": {}
 }
