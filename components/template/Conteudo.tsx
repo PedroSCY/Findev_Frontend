@@ -6,7 +6,7 @@ interface ConteudoProps {
 
 export default function Conteudo(props:ConteudoProps) {
     return (
-        <FlexCustom col center className="flex-1 text-gray-200">
+        <FlexCustom col center className="flex-1">
             {props.children}
         </FlexCustom>
     );

@@ -2,35 +2,44 @@ import { IconMinus, IconPlus } from "@tabler/icons-react";
 import FlexCustom from "../FlexCustom";
 
 interface MenuSecaoProps {
-    titulo: string
-    mini: boolean
-    aberta: boolean
-    children: any
-    onClick?: () => void
+  titulo: string;
+  mini: boolean;
+  aberta: boolean;
+  children: any;
+  onClick?: () => void;
 }
 
 export default function MenuSecao(props: MenuSecaoProps) {
-    const { titulo, mini, aberta } = props;
+  const { titulo, mini, aberta } = props;
 
-    return (
-        <FlexCustom col gap={4} className={`${mini && "items-center"}`}>
-            <span className={`
+  return (
+    <FlexCustom col gap={0} className={`${mini && "items-center"}`}>
+      <span
+        className={`
                 flex items-center justify-between
-                text-zinc-400 uppercase font-bold 
+                text-sidebar-foreground uppercase font-bold p-2 rounded-xs ${
+                  !mini &&
+                  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                }
                 ${mini && "text-[11px]"} cursor-pointer
-            `} onClick={() => props.onClick?.()}>
-                {mini ? titulo : (
-                    <>
-                        {titulo}
-                        {aberta ? <IconMinus size={15} /> : <IconPlus size={15} />}
-                    </>
-                )}
-            </span>
-            {aberta && (
-                <FlexCustom col gap={1.5}>
-                    {props.children}
-                </FlexCustom>
-            )}
-        </FlexCustom>
-    );
+            `}
+        onClick={() => props.onClick?.()}
+      >
+        {mini ? (
+          titulo
+        ) : (
+          <>
+            {titulo}
+            {aberta ? <IconMinus size={15} /> : <IconPlus size={15} />}
+          </>
+        )}
+      </span>
+
+        {aberta && (
+          <FlexCustom col gap={1.5}>
+            {props.children}
+          </FlexCustom>
+        )}
+    </FlexCustom>
+  );
 }

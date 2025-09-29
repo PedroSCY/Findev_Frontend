@@ -6,7 +6,14 @@ import MenuPrincipalItem from "./MenuPrincipalItem";
 import { MenuItem } from "@/data/models/MenuItem";
 import FlexCustom from "../FlexCustom";
 import Logo from "../Logo";
-import { IconArrowLeftTail, IconChevronCompactLeft, IconMenu } from "@tabler/icons-react";
+import {
+  IconArrowLeftTail,
+  IconChevronCompactLeft,
+  IconLayoutSidebarLeftCollapseFilled,
+  IconLayoutSidebarLeftExpand,
+  IconMenu,
+} from "@tabler/icons-react";
+import { ToggleTheme } from "@/components/ui/custom/ToggleTheme";
 
 export default function MenuPrincipal() {
   const { secoes, mini, toggleMini, alternarSecao } = useMenu();
@@ -42,17 +49,27 @@ export default function MenuPrincipal() {
     <aside
       className={`
             flex flex-col overflow-y-auto overflow-x-hidden
-            bg-black shadow-md shadow-zinc-800
-            ${mini ? "items-center w-[130px]" : "w-[340px]"}
+             shadow-md  transition-all duration-300 ease-out bg-sidebar
+            ${mini ? " w-[130px]" : "w-[340px]"}
         `}
     >
-      <FlexCustom  className="flex m-7 justify-between items-center">
-        {!mini && <div className=""> <Logo grande/></div>}
-        <div className="cursor-pointer p-2 rounded-md hover:bg-zinc-800" onClick={toggleMini}>
-          {mini ? <IconMenu size={30} /> : <IconChevronCompactLeft  size={30}/>}
+      <FlexCustom className={`flex m-7 ${mini ? "justify-center":"justify-between"} items-center`}>
+        {!mini && (
+          <div className="">
+            {" "}
+            <Logo grande />
+          </div>
+        )}
+        <div className="cursor-pointer p-2 hover:bg-sidebar-accent rounded-xs " onClick={toggleMini}>
+          {mini ? <IconLayoutSidebarLeftExpand size={30} /> : <IconLayoutSidebarLeftCollapseFilled size={30} />}
         </div>
       </FlexCustom>
-      <nav className="flex flex-col gap-4 m-7">{renderizarSecoes()}</nav>
+
+      <nav className="flex flex-1 flex-col gap-4 m-7">{renderizarSecoes()}</nav>
+
+      <div className="flex m-7">
+        <ToggleTheme />
+      </div>
     </aside>
   );
 }

@@ -17,9 +17,8 @@ export default function MenuItem(props: MenuItemProps) {
             id={titulo}
             href={url}
             className={`
-            flex items-center gap-2 rounded-md
-            hover:bg-zinc-800 px-3 py-2
-            ${ selecionado && "text-purple-700 bg-zinc-900"}
+            flex items-center gap-2 rounded-md px-3 py-2
+            ${ selecionado && "text-purple-70"}
         `}
         >
             {icone ?? <IconCode />}

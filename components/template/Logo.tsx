@@ -22,7 +22,7 @@ export default function Logo(props: LogoProps) {
                     >
                         FinDev
                     </div>
-                    {props.subtitulo && <div className="text-zinc-500 text-sm">{props.subtitulo}</div>}
+                    {props.subtitulo && <div className=" text-sm">{props.subtitulo}</div>}
                 </FlexCustom>
             </FlexCustom>
         </Link>

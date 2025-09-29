@@ -13,7 +13,6 @@ export default function Pagina(props: PaginaProps) {
     return (
         <div className={`
             flex h-screen w-screen
-            bg-zinc-900 text-white
         `}>
             <MenuPrincipal />
             <FlexCustom col className={`flex-1 p-7`}>
