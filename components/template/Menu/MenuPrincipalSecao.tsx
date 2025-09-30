@@ -1,4 +1,4 @@
-import { IconMinus, IconPlus } from "@tabler/icons-react";
+import { IconChevronDown, IconChevronRight, IconMinus, IconPlus } from "@tabler/icons-react";
 import FlexCustom from "../FlexCustom";
 
 interface MenuSecaoProps {
@@ -15,7 +15,7 @@ export default function MenuSecao(props: MenuSecaoProps) {
   return (
     <FlexCustom col gap={0} className={`${mini && "items-center"}`}>
       <span
-        className={`
+        className={`select-none
                 flex items-center justify-between
                 text-sidebar-foreground uppercase font-bold p-2 rounded-xs ${
                   !mini &&
@@ -30,16 +30,16 @@ export default function MenuSecao(props: MenuSecaoProps) {
         ) : (
           <>
             {titulo}
-            {aberta ? <IconMinus size={15} /> : <IconPlus size={15} />}
+            {aberta ? <IconChevronDown size={15} /> : <IconChevronRight size={15} />}
           </>
         )}
       </span>
 
-        {aberta && (
-          <FlexCustom col gap={1.5}>
-            {props.children}
-          </FlexCustom>
-        )}
+      {aberta && (
+        <FlexCustom col gap={1.5} className="pt-2">
+          {props.children}
+        </FlexCustom>
+      )}
     </FlexCustom>
   );
 }

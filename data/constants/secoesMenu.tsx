@@ -1,11 +1,29 @@
 import {
   IconBox,
   IconFiles,
+  IconGraph,
+  IconHome,
   IconShoppingCart,
   IconUsers,
 } from "@tabler/icons-react";
 
 export const secoes = [
+  {
+    titulo: "MenuItem",
+    aberta: true,
+    itens: [
+      {
+        titulo: "Inicio",
+        url: "/home",
+        icone: <IconHome />,
+      },
+      {
+        titulo: "Dashboard",
+        url: "/dashboard",
+        icone: <IconGraph />,
+      },
+    ],
+  },
   {
     titulo: "Gerenciar",
     aberta: true,
@@ -33,7 +51,7 @@ export const secoes = [
     itens: [
       {
         titulo: "Obter Relatorio",
-        url: "/gerenciar/produtos",
+        url: "/relatorios/obterrelatorio",
         icone: <IconFiles />,
       },
     ],
