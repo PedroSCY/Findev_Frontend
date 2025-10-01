@@ -11,6 +11,7 @@ import {
   IconLayoutSidebarLeftExpand,
 } from "@tabler/icons-react";
 import { ToggleTheme } from "@/components/ui/custom/ToggleTheme";
+import UserDropdown from "../UserDropdown";
 
 export default function MenuPrincipal() {
   const { secoes, mini, toggleMini, alternarSecao } = useMenu();
@@ -91,7 +92,7 @@ export default function MenuPrincipal() {
       <nav className="flex flex-1 flex-col gap-4 m-7">{renderizarSecoes()}</nav>
 
       <div className="flex m-7">
-        <ToggleTheme />
+        <UserDropdown/>
       </div>
     </aside>
   );

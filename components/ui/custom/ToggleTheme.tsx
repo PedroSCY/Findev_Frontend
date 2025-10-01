@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { IconAB2 } from "@tabler/icons-react"
 
 export function ToggleTheme() {
   const { setTheme } = useTheme()
@@ -26,12 +27,15 @@ export function ToggleTheme() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
+          <Sun/>
           Claro
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
+          <Moon/>
           Escuro
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
+          <IconAB2/>
           Auto
         </DropdownMenuItem>
       </DropdownMenuContent>
