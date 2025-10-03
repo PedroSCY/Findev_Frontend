@@ -1,8 +1,10 @@
 import {
   IconBox,
   IconFiles,
+  IconFileSpreadsheet,
   IconGraph,
   IconHome,
+  IconListDetails,
   IconShoppingCart,
   IconUsers,
 } from "@tabler/icons-react";
@@ -52,7 +54,7 @@ export const secoes = [
       {
         titulo: "Obter Relatorio",
         url: "/relatorios/obterrelatorio",
-        icone: <IconFiles />,
+        icone: <IconFileSpreadsheet />,
       },
     ],
   },

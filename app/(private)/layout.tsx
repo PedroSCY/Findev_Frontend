@@ -8,7 +8,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       <div className="flex h-screen w-screen">
         <MenuPrincipal />
         <Conteudo>
-          <main>{props.children}</main>
+          <main className="flex flex-1 max-w-7xl">{props.children}</main>
         </Conteudo>
       </div>
     </MenuProvider>

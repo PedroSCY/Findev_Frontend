@@ -17,7 +17,7 @@ export default function Logo(props: LogoProps) {
                     <div
                         className={`
                         ${props.grande ? "text-4xl" : "text-2xl"}
-                        font-black
+                        font-black bg-gradient-to-br from-primary via-primary to-muted-foreground bg-clip-text text-transparent
                     `}
                     >
                         FinDev

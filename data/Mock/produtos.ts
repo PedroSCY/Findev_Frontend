@@ -1,0 +1,102 @@
+import { Produto } from "../models/produtos";
+
+const produtos: Produto[] = [
+  {
+    id: "1",
+    nome: "Produto 1",
+    descricao: "Descrição do Produto 1",
+    preco: 100.0,
+    sku: "SKU001",
+    cadastro: "2023-10-01",
+  },
+  {
+    id: "2",
+    nome: "Produto 2",
+    descricao: "Descrição do Produto 2",
+    preco: 200.0,
+    sku: "SKU002",
+    cadastro: "2023-10-02",
+  },
+  {
+    id: "3",
+    nome: "Produto 3",
+    descricao: "Descrição do Produto 3",
+    preco: 300.0,
+    sku: "SKU003",
+    cadastro: "2023-10-03",
+  },
+  {
+    id: "4",
+    nome: "Produto 4",
+    descricao: "Descrição do Produto 4",
+    preco: 400.0,
+    sku: "SKU004",
+    cadastro: "2023-10-04",
+  },
+  {
+    id: "5",
+    nome: "Produto 5",
+    descricao: "Descrição do Produto 5",
+    preco: 500.0,
+    sku: "SKU005",
+    cadastro: "2023-10-05",
+  },
+  {
+    id: "6",
+    nome: "Produto 6",
+    descricao: "Descrição do Produto 6",
+    preco: 600.0,
+    sku: "SKU006",
+    cadastro: "2023-10-06",
+  },
+  {
+    id: "7",
+    nome: "Produto 7",
+    descricao: "Descrição do Produto 7",
+    preco: 700.0,
+    sku: "SKU007",
+    cadastro: "2023-10-07",
+  },
+  {
+    id: "8",
+    nome: "Produto 8",
+    descricao: "Descrição do Produto 8",
+    preco: 800.0,
+    sku: "SKU008",
+    cadastro: "2023-10-08",
+  },
+  {
+    id: "9",
+    nome: "Produto 9",
+    descricao: "Descrição do Produto 9",
+    preco: 900.0,
+    sku: "SKU008",
+    cadastro: "2023-10-09",
+  },
+  {
+    id: "10",
+    nome: "Produto 10",
+    descricao: "Descrição do Produto 10",
+    preco: 1000.0,
+    sku: "SKU010",
+    cadastro: "2023-10-10",
+  },
+  {
+    id: "11",
+    nome: "Produto 11",
+    descricao: "Descrição do Produto 11",
+    preco: 1100.0,
+    sku: "SKU011",
+    cadastro: "2023-10-11",
+  },
+  {
+    id: "12",
+    nome: "Produto 12",
+    descricao: "Descrição do Produto 12",
+    preco: 1200.0,
+    sku: "SKU012",
+    cadastro: "2023-10-12",
+  }
+];
+
+export default produtos;

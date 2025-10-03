@@ -1,26 +1,16 @@
-import Cabecalho from "./Cabecalho"
-import Conteudo from "./Conteudo"
-import FlexCustom from "./FlexCustom"
-import MenuPrincipal from "./Menu/MenuPrincipal"
+import Cabecalho from "./Cabecalho";
 
 interface PaginaProps {
-    titulo?: string
-    subtitulo?: string
-    children?: any
+  titulo?: string;
+  subtitulo?: string;
+  children?: any;
 }
 
 export default function Pagina(props: PaginaProps) {
-    return (
-        <div className={`
-            flex h-screen w-screen
-        `}>
-            <MenuPrincipal />
-            <FlexCustom col className={`flex-1 p-7`}>
-                <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
-                <Conteudo>
-                    {props.children}
-                </Conteudo>
-            </FlexCustom>
-        </div>
-    )
+  return (
+    <div className="flex flex-col w-full">
+      <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+      {props.children}
+    </div>
+  );
 }

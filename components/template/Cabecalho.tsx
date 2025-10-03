@@ -9,13 +9,10 @@ interface CabecalhoProps {
 
 export default function Cabecalho(props: CabecalhoProps) {
   return (
-    <FlexCustom centerCross className="justify-start p-2">
+    <FlexCustom centerCross className="justify-start">
       {props.titulo && (
         <Titulo titulo={props.titulo} subtitulo={props.subtitulo} />
       )}
-      <div className="position absolute right-4 top-4">
-        <ToggleTheme />
-      </div>
     </FlexCustom>
   );
 }
