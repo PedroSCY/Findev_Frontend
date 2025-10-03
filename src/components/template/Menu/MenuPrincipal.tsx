@@ -1,9 +1,9 @@
 "use client";
-import useMenu from "@/data/hooks/useMenu";
-import { MenuSecao } from "@/data/models/MenuSecao";
+import useMenu from "@/hooks/useMenu";
+import { MenuSecao } from "@/models/MenuSecao";
 import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import MenuPrincipalItem from "./MenuPrincipalItem";
-import { MenuItem } from "@/data/models/MenuItem";
+import { MenuItem } from "@/models/MenuItem";
 import FlexCustom from "../FlexCustom";
 import Logo from "../Logo";
 import {
@@ -92,7 +92,7 @@ export default function MenuPrincipal() {
       <nav className="flex flex-1 flex-col gap-4 m-7">{renderizarSecoes()}</nav>
 
       <div className="flex m-7">
-        <UserDropdown/>
+        <UserDropdown />
       </div>
     </aside>
   );

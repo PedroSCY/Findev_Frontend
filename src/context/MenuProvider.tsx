@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import secoesMenu from "@/data/constants/secoesMenu";
-import useBoolean from "@/data/hooks/useBoolean";
-import useTamanhoJanela from "@/data/hooks/useTamanhoJanela";
-import { MenuSecao } from "@/data/models/MenuSecao";
+import useBoolean from "@/hooks/useBoolean";
+import useTamanhoJanela from "@/hooks/useTamanhoJanela";
+import { MenuSecao } from "@/models/MenuSecao";
 import { usePathname } from "next/navigation";
 import React, { createContext, ReactNode, useEffect, useState } from "react";
 
@@ -23,28 +23,28 @@ export function MenuProvider(props: { children: ReactNode }) {
   }, [tamanho]);
 
   useEffect(() => {
-    if(!url) return;
+    if (!url) return;
     setSecoes((prev: MenuSecao[]) => selecionarItem(prev, url));
   }, [url]);
 
   function alternarSecao(secaoSelecionada: MenuSecao) {
-    setSecoes((prev:any) =>
-      prev.map((secao:any) =>
+    setSecoes((prev: any) =>
+      prev.map((secao: any) =>
         secao.titulo === secaoSelecionada.titulo
           ? { ...secao, aberta: !secao.aberta }
           : secao
       )
-    )
+    );
   }
 
-   function selecionarItem(prevSecoes: MenuSecao[], url: string): MenuSecao[] {
-    return prevSecoes.map(secao => {
-      const novosItens = (secao.itens ?? []).map(item => ({
+  function selecionarItem(prevSecoes: MenuSecao[], url: string): MenuSecao[] {
+    return prevSecoes.map((secao) => {
+      const novosItens = (secao.itens ?? []).map((item) => ({
         ...item,
         selecionado: item.url === url,
-      }))
-      return { ...secao, itens: novosItens }
-    })
+      }));
+      return { ...secao, itens: novosItens };
+    });
   }
 
   const ctx = { secoes, mini, toggleMini, alternarSecao };

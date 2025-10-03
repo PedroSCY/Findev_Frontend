@@ -1,4 +1,4 @@
-import { Venda } from "../models/vendas";
+import { Venda } from "../../models/vendas";
 
 const vendas: Venda[] = [
   {

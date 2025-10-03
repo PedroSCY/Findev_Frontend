@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/data/context/ThemeProvider";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 const roboto = Geist({
   variable: "--font-roboto",

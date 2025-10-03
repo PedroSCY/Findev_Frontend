@@ -1,4 +1,4 @@
-import { Produto } from "../models/produtos";
+import { Produto } from "../../models/produtos";
 
 const produtos: Produto[] = [
   {
@@ -96,7 +96,7 @@ const produtos: Produto[] = [
     preco: 1200.0,
     sku: "SKU012",
     cadastro: "2023-10-12",
-  }
+  },
 ];
 
 export default produtos;

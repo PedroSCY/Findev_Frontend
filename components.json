@@ -17,8 +17,9 @@
     "ui": "@/components/ui",
     "lib": "@/lib",
     "data": "@/data",
-    "hooks": "@/data/hooks",
-    "contexts": "@/data/contexts"
+    "hooks": "@/hooks",
+    "contexts": "@/contexts",
+    "models": "@/models"
   },
   "registries": {}
 }

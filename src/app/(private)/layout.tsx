@@ -1,6 +1,6 @@
 import Conteudo from "@/components/template/Conteudo";
 import MenuPrincipal from "@/components/template/Menu/MenuPrincipal";
-import { MenuProvider } from "@/data/context/MenuProvider";
+import { MenuProvider } from "@/context/MenuProvider";
 
 export default function Layout(props: { children: React.ReactNode }) {
   return (
